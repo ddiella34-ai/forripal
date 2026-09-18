@@ -604,5 +604,26 @@ function emojiRain(){
 }
 
 </script>
-</body>
+<div style="text-align:center; margin:20px 0;">
+  <audio id="birthdayMusic" src="Mp3.mp3"></audio>
+
+  <button onclick="toggleMusic()" style="padding:12px 20px; border:none; border-radius:25px; background:#ff69b4; color:white; font-size:16px;">
+    🎵 Play Music 💗
+  </button>
+</div>
+
+<script>
+function toggleMusic() {
+  const music = document.getElementById("birthdayMusic");
+  const button = document.querySelector("button[onclick='toggleMusic()']");
+
+  if (music.paused) {
+    music.play();
+    button.innerHTML = "⏸️ Pause Music 💗";
+  } else {
+    music.pause();
+    button.innerHTML = "🎵 Play Music 💗";
+  }
+}
+</script></body>
 </html>
